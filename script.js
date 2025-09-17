@@ -1,14 +1,19 @@
-const toggle = document.getElementById("toggle");
-const menu = document.getElementById("menu");
-const bar = document.getElementById("bars");
+const element = document.getElementById("fade-down");
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("menu-open");
-  const barOpen = menu.classList.contains("menu-open");
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
 
-  bar.classList = barOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-});
-
-AOS.init({
-  once: true,
+  if(element) observer.observe(element); 
 });

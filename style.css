@@ -12,7 +12,7 @@ html, body{
 header{
     background-color: rgb(14,20,18);
     height: 70px;
-    padding: 23px 20px;
+    padding: 23px 30px;
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -78,12 +78,11 @@ main::before {
 main .hero-content{
     color: #fff;
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 10%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
 }
 
 main .hero-content h1{
@@ -113,6 +112,18 @@ main .buttons a{
     padding: 7px 2rem;
     border-radius: 20px;
 }
+
+main .fade-down{
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+main .fade-down.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .projects img{
     width: 100px;
 }
