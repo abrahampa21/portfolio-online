@@ -1,19 +1,7 @@
-const element = document.getElementById("fade-down");
-
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.3,
-    }
-  );
-
-  if(element) observer.observe(element); 
+window.addEventListener("DOMContentLoaded", () => {
+  const fadeDownElement = document.querySelector(".fade-down");
+  const rect = fadeDownElement.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    fadeDownElement.classList.add("visible");
+  }
 });
