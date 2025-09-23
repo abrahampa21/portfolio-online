@@ -89,16 +89,16 @@ main .hero-content {
   gap: 1rem;
 }
 
-main .hero-content h1 {
+main h1 {
   font-size: 8rem;
   margin: -1rem -10px 0;
 }
 
-main .hero-content h3:first-child {
+main h3:first-child {
   font-size: 1.8rem;
 }
 
-main .hero-content h3 {
+main h3 {
   font-size: 1.5rem;
 }
 
@@ -119,8 +119,8 @@ main .buttons a {
 
 main .fade-down {
   opacity: 0;
-  transform: translateY(-30px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transform: translateY(-110px);
+  transition: 0.8s ease-in-out;
 }
 
 main .fade-down.visible {
@@ -342,8 +342,64 @@ main .fade-down.visible {
   z-index: -1;
 }
 
+.projects .projects-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  top: 20%;
+  left: 16%;
+}
+
+.projects h2 {
+  width: fit-content;
+  border-bottom: 4px solid darkcyan;
+  margin: 0 auto;
+}
+
+.projects .websites {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.website-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .projects img {
-  width: 100px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+/*Footer*/
+footer {
+  background-color: #1a2b3a;
+  padding: 13px 30px;
+}
+
+.social-medias {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.social-medias i {
+  color: #fff;
+  font-size: 1.8rem;
 }
 
 /*Button to return to the top*/
@@ -368,4 +424,69 @@ main .fade-down.visible {
 .return-top:hover {
   background-color: #00cccc;
   transform: scale(1.1);
+}
+
+/*Hamburguer menu*/
+.fa-bars {
+  display: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 810px) {
+  .return-top {
+    right: 15px;
+    bottom: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  nav .links {
+    display: none;
+  }
+
+  header {
+    position: static;
+    background-color: #000;
+  }
+
+  nav {
+    justify-content: space-around;
+  }
+
+  main h1 {
+    font-size: 6rem;
+  }
+
+  main h3:first-child {
+    font-size: 1.5rem;
+  }
+
+  main h3 {
+    font-size: 1.3rem;
+  }
+
+  main .buttons a {
+    font-size: 1rem;
+  }
+
+  .about-me-div {
+    left: 4%;
+  }
+
+  .city {
+    left: 4%;
+  }
+
+  .about-me p {
+    font-size: 13px;
+  }
+
+  footer a {
+    font-size: 13px;
+  }
+
+  .fa-bars {
+    display: block;
+  }
 }
