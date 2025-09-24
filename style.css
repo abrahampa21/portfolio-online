@@ -197,8 +197,19 @@ main .fade-down.visible {
   flex-wrap: wrap;
 }
 
+.resume > div{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  padding: 0 1rem;
+}
+
 .skills-div h2 {
   margin-bottom: 12px;
+}
+
+.resume hr{
+  display: none;
 }
 
 .resume h2 {
@@ -433,9 +444,24 @@ footer a {
   font-size: 1.5rem;
 }
 
+@media (max-width: 850px) {
+  .resume {
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+
+  .resume hr {
+    display: block;
+    height: 3px;
+    width: 80%;
+    background-color: #fff;
+  }
+
+}
+
 @media (max-width: 810px) {
   .return-top {
-    right: 15px;
+    right: 12px;
     bottom: 12px;
   }
 }
@@ -443,6 +469,17 @@ footer a {
 @media (max-width: 650px) {
   nav .links {
     display: none;
+  }
+
+  main .hero-content{
+    position: static;
+  }
+
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   header {
@@ -488,5 +525,9 @@ footer a {
 
   .fa-bars {
     display: block;
+  }
+
+  footer{
+    padding: 13px 15px;
   }
 }
