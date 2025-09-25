@@ -1,3 +1,7 @@
+const toggle = document.getElementById("toggle");
+const menu = document.getElementById("menu");
+const bars = document.getElementById("bars");
+
 window.addEventListener("DOMContentLoaded", () => {
   const fadeDownElement = document.querySelector(".fade-down");
   const rect = fadeDownElement.getBoundingClientRect();
@@ -26,3 +30,22 @@ function returnTop(){
     top: 0
   });
 }
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("menu-open");
+  const barOpen = menu.classList.contains("menu-open");
+
+  bar.classList = barOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+})
+
+document.addEventListener("click", e => {
+  const clickOutsideMenu = !menu.contains(e.target);
+  const clickOutsideToggle = !toggle.contains(e.target);
+
+  if(clickOutsideMenu && clickOutsideToggle){
+    if(menu.classList.contains("menu-open"));
+    menu.classList.remove("menu-open");
+    bar.className = "fa-solid fa-bars";
+  }
+
+})
