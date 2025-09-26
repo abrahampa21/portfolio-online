@@ -10,7 +10,10 @@
 html,
 body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
+
 
 /*Navbar*/
 header {
@@ -36,7 +39,8 @@ nav .cellphone {
 }
 
 nav .links li:first-child a {
-  color: rgb(2, 64, 73);
+  color: rgb(4, 95, 109);
+  font-weight: 600;
 }
 
 nav .links li {
@@ -589,7 +593,7 @@ footer a {
   }
 
   .about-me-content{
-    width: 370px;
+    width: 350px;
   }
 }
 
