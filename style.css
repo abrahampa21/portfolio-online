@@ -11,9 +11,7 @@ html,
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
-
 }
-
 
 /*Navbar*/
 header {
@@ -201,7 +199,7 @@ main .fade-down.visible {
   flex-wrap: wrap;
 }
 
-.resume > div{
+.resume > div {
   margin: 0 auto;
   width: 100%;
   max-width: 350px;
@@ -212,7 +210,7 @@ main .fade-down.visible {
   margin-bottom: 12px;
 }
 
-.resume hr{
+.resume hr {
   display: none;
 }
 
@@ -457,9 +455,9 @@ footer a {
   top: 8%;
   right: 10%;
   padding: 15px 15px;
-  background-color: rgba(0,0,0,0,0.50);
+  background-color: rgba(0, 0, 0, 0, 0.5);
   margin: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -494,7 +492,6 @@ footer a {
     width: 80%;
     background-color: #fff;
   }
-
 }
 
 @media (max-width: 810px) {
@@ -504,30 +501,57 @@ footer a {
   }
 }
 
-
-
 @media (max-width: 650px) {
-  header{
+  header {
     padding-left: 0px;
   }
 
-  nav .links{
+  nav .links {
     gap: 2rem;
   }
 
-  nav .links li, nav .cellphone{
+  nav .links li,
+  nav .cellphone {
     font-size: 14px;
   }
 
-  main .hero-content{
+  main .hero-content {
     position: static;
   }
 
-  main{
+  main {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    min-height: 80dvh;
+  }
+
+  .about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70dvh;
+  }
+
+  .about-me-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: static;
+  }
+
+  .city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .resume > div{
+    padding: 1rem 0;
   }
 
   header {
@@ -555,54 +579,53 @@ footer a {
     font-size: 1rem;
   }
 
-  .about-me-div {
-    left: 4%;
-  }
-
-  .city {
-    left: 4%;
-  }
-
   .about-me p {
     font-size: 13px;
   }
-
-  footer a {
-    font-size: 13px;
-  }
-
-
-  footer{
-    padding: 13px 15px;
-  }
 }
 
-@media (max-width: 530px){
-  nav{
+@media (max-width: 530px) {
+  nav {
     flex-direction: row-reverse;
   }
-  nav .links{
+  nav .links {
     display: none;
   }
-  .toggle i{
+  .toggle i {
     display: block;
   }
 
-  header{
+  header {
     padding-left: 20px;
   }
 
-  .about-me-content{
-    width: 350px;
+  .about-me {
+    padding: 0 1.8rem;
+  }
+
+  .about-me-content {
+    width: auto;
   }
 }
 
-@media (max-width: 450px){
-  .return-top{
+@media (max-width: 450px) {
+  .return-top {
     bottom: 0;
     right: 0;
     border-radius: 0;
     height: 52px;
     font-size: 1.3rem;
+  }
+
+  footer {
+    padding: 13px 20px;
+  }
+
+  .social-medias {
+    gap: 12px;
+  }
+
+  footer a {
+    font-size: 13px;
   }
 }
