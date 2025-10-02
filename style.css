@@ -16,7 +16,7 @@ body {
 /*Navbar*/
 header {
   background-color: rgba(14, 20, 18, 0.3);
-  height: 70px;
+  height: 75px;
   padding: 23px 30px;
   position: fixed;
   z-index: 1000;
@@ -449,7 +449,7 @@ footer a {
 .toggle i {
   display: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .menu {
@@ -516,8 +516,7 @@ footer a {
     gap: 2rem;
   }
 
-  nav .links li,
-  nav .cellphone {
+  nav .links li{
     font-size: 14px;
   }
 
@@ -629,6 +628,10 @@ footer a {
 
   .social-medias {
     gap: 12px;
+  }
+
+  nav .cellphone{
+      font-size: 1.3rem;
   }
 
   footer a {
