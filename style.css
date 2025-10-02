@@ -163,6 +163,10 @@ main .fade-down.visible {
   width: 500px;
 }
 
+.about-me-content p{
+  text-align: justify;
+}
+
 .city {
   position: absolute;
   bottom: 7%;
